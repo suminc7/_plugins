@@ -11,19 +11,18 @@ var responsive = (function(){
 
     var queries = body.getAttribute('data-size');
     var queryArray = queries.split(':');
-    console.log(queryArray);
 
 
     function getViewportSize(){
         return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     }
 
-    var currentType = "";
+
     function getType(){
         return viewportSize < queryArray[0] ? "mobile" : (viewportSize > queryArray[1] ? "web" : "tablet");
     }
 
-    currentType = getType();
+    var currentType = getType();
 
 
 
@@ -42,8 +41,8 @@ var responsive = (function(){
 
         var type = getType();
         if(currentType != type){
-            setImageSource();
             currentType = type;
+            setImageSource();
         }
     }
 
@@ -57,31 +56,11 @@ var responsive = (function(){
 
 
 
-    var hasAttr;
-    if(!body.hasAttribute){ //IE <=7 fix
-
-        hasAttr = function(el, attrName){ //IE does not support Object.Prototype
-            return el.getAttribute(attrName) !== 'null';
-        };
-
-    } else {
-
-        hasAttr = function(el, attrName){
-            return el.hasAttribute(attrName);
-        };
-
-    }
-
-    hasAttr(body, 'data-size')
-
-    body.hasAttribute('data-size');
     
     var exports = {
         
     };
 
-    console.log(hasAttr(body, 'data-size'));
-    console.log(images);
 
     return exports;
 }());
