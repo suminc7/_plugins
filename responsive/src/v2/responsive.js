@@ -31,7 +31,7 @@ var responsive = (function(){
         for (var i = 0; i < images.length; i++) {
             var image = images[i];
             var path = image.getAttribute('data-path');
-            image.src = path + image.getAttribute('data-'+currentType);
+            image.src = path +image.getAttribute('data-'+currentType);
         }
     }
     setImageSource();
@@ -55,7 +55,7 @@ var responsive = (function(){
     resize();
 
 
-
+    //hello
     
     var exports = {
         

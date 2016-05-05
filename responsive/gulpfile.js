@@ -4,7 +4,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 
 gulp.task('compress', function() {
-    gulp.src('lib/**/*.js')
+    gulp.src('src/**/*.js')
         .pipe(uglify())
         .pipe(rename({
             suffix: '.min'
@@ -13,18 +13,8 @@ gulp.task('compress', function() {
         .pipe(gulp.dest('examples/js'));
 });
 
+gulp.task('watch', function(){
+    gulp.watch('src/**/*.js', ['compress']);
+});
 
-
-
-// var uglify = require('gulp-uglify');
-//
-// gulp.task('compress', function() {
-//     return gulp.src('lib/*.js')
-//         .pipe(uglify())
-//         .pipe(gulp.dest('dist'));
-// });
-
-
-
-
-gulp.task('default', ['compress']);
+gulp.task('default', ['compress', 'watch']);
