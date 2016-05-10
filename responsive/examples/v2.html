@@ -18,7 +18,12 @@
 
 </aside>
 
-<script src='js/v2/responsive.js'></script>
+<script src='js/v2/responsive.min.js'></script>
+<script type="text/javascript">
+	responsive.addChangedType(function(type, size){
+		console.log(type, size);
+	});
+</script>
 
 </body>
 </html>
