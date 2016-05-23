@@ -1,6 +1,6 @@
 # plugins
 
 
-responsive file
+responsive file1
 
 jquery
