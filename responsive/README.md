@@ -11,9 +11,9 @@ Picture element와 흡사한 기능으로 img tag를 반응형 사이즈에 맞�
 
 하단 body 태그위에 삽입 합니다.
 
-	<script src='responsive.min.js'></script>
+	    <script src='responsive.min.js'></script>
 	</body>
-</html>
+    </html>
 
 
 #### HTML 구조
